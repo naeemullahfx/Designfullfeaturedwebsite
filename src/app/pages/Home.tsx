@@ -82,7 +82,15 @@ export const Home: React.FC<HomeProps> = ({ setView, onViewExperience, onBookExp
         onExplore={() => {
           document.getElementById('experiences')?.scrollIntoView({ behavior: 'smooth' });
         }} 
-        onBook={() => setView('booking')} 
+        onBook={() => {
+          // Default to Layyah Old City Heritage Walk (exp-3) when booking from Hero
+          const defaultWalk = experiences.find(e => e.id === 'exp-3');
+          if (defaultWalk) {
+            onBookExperience(defaultWalk);
+          } else {
+            setView('booking');
+          }
+        }} 
       />
 
       {/* SECTION 2: ABOUT THE PLATFORM */}
