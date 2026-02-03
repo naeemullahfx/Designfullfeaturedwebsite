@@ -1,5 +1,3 @@
-import imgFatehpurWalk from 'figma:asset/094747da906b532860d6d76bb5c9440f0809e15a.png';
-
 // --- EXPERIENCES (Bookable Activities) ---
 export const experiences = [
   {
@@ -83,7 +81,7 @@ export const places = [
     name: 'Bail Chowk',
     description: 'The central historic square of Layyah, representing the agricultural heart of the region. It features a prominent statue of a pair of bulls, symbolizing the farming heritage of the Thal desert.',
     location: 'Central Layyah City',
-    image: 'https://images.unsplash.com/photo-1595846519845-68e298c2edd8?auto=format&fit=crop&q=80&w=1080',
+    image: 'https://images.unsplash.com/photo-1592753096246-2272a0b5222b?auto=format&fit=crop&q=80&w=1080',
     relatedRouteId: 'route-3',
     coordinates: { lat: 30.9680, lng: 70.9430 }
   },
@@ -92,7 +90,7 @@ export const places = [
     name: 'Karor Lal Esan',
     description: 'A historic town and spiritual center dating back centuries. It serves as the resting place of Hazrat Lal Esan and features narrow ancient streets and pre-partition architecture.',
     location: 'Karor Lal Esan',
-    image: 'https://images.unsplash.com/photo-1580220261314-255d65415754?auto=format&fit=crop&q=80&w=1080',
+    image: 'https://images.unsplash.com/photo-1610015586724-661cbafc561f?auto=format&fit=crop&q=80&w=1080',
     relatedRouteId: 'route-2',
     coordinates: { lat: 31.2185, lng: 70.9520 }
   },
@@ -101,7 +99,7 @@ export const places = [
     name: 'Chowk Azam',
     description: 'A historic commercial hub and major intersection in the district. It has grown from a small settlement into a bustling trade center connecting various parts of South Punjab.',
     location: 'Chowk Azam',
-    image: 'https://images.unsplash.com/photo-1519451241324-20b4ea2c4220?auto=format&fit=crop&q=80&w=1080',
+    image: 'https://images.unsplash.com/photo-1740989804318-95864fadb38e?auto=format&fit=crop&q=80&w=1080',
     relatedRouteId: null,
     coordinates: { lat: 30.9700, lng: 71.1800 }
   },
@@ -110,7 +108,7 @@ export const places = [
     name: 'Chowk Azam Mini Yadgaar',
     description: 'A local memorial monument located in Chowk Azam, serving as a landmark and a reminder of local history and community identity.',
     location: 'Chowk Azam',
-    image: 'https://images.unsplash.com/photo-1596541223130-5d31a73fb6c6?auto=format&fit=crop&q=80&w=1080',
+    image: 'https://images.unsplash.com/photo-1567845155283-b8b6da69ae8e?auto=format&fit=crop&q=80&w=1080',
     relatedRouteId: null,
     coordinates: { lat: 30.9705, lng: 71.1805 }
   },
@@ -119,7 +117,7 @@ export const places = [
     name: 'Thal Desert',
     description: 'A vast geographical and cultural heritage region. The Thal desert is known for its unique ecosystem, nomadic lifestyle, and chickpea cultivation. It is the soul of Layyah\'s landscape.',
     location: 'Greater Layyah Region',
-    image: 'https://images.unsplash.com/photo-1547234935-80c7142ee969?auto=format&fit=crop&q=80&w=1080',
+    image: 'https://images.unsplash.com/photo-1561573047-989ab420948f?auto=format&fit=crop&q=80&w=1080',
     relatedRouteId: 'route-4',
     coordinates: { lat: 31.1000, lng: 71.5000 }
   },
@@ -128,7 +126,7 @@ export const places = [
     name: 'Forest Park Chowk Azam',
     description: 'A large recreational area offering a glimpse into the local flora. It serves as a green lung for the area and a popular spot for family picnics and nature walks.',
     location: 'Chowk Azam',
-    image: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&q=80&w=1080',
+    image: 'https://images.unsplash.com/photo-1768373064088-f890cc7f5b00?auto=format&fit=crop&q=80&w=1080',
     relatedRouteId: null,
     coordinates: { lat: 30.9800, lng: 71.1700 }
   },
@@ -137,7 +135,7 @@ export const places = [
     name: 'TDA Park Layyah',
     description: 'One of the oldest parks in the city, established by the Thal Development Authority. It reflects the greening efforts of the desert region and provides a serene environment.',
     location: 'Layyah City',
-    image: 'https://images.unsplash.com/photo-1566802871077-d5dc25392e22?auto=format&fit=crop&q=80&w=1080',
+    image: 'https://images.unsplash.com/photo-1652563873701-e833732ef395?auto=format&fit=crop&q=80&w=1080',
     relatedRouteId: null,
     coordinates: { lat: 30.9650, lng: 70.9450 }
   },
@@ -146,7 +144,7 @@ export const places = [
     name: 'Family Park Layyah',
     description: 'A modern community space designed for families, featuring walking tracks and play areas, representing the evolving urban lifestyle of Layyah.',
     location: 'Layyah City',
-    image: 'https://images.unsplash.com/photo-1585642436098-b02447d25e4c?auto=format&fit=crop&q=80&w=1080',
+    image: 'https://images.unsplash.com/photo-1768633981225-a95323384239?auto=format&fit=crop&q=80&w=1080',
     relatedRouteId: null,
     coordinates: { lat: 30.9750, lng: 70.9480 }
   },
@@ -155,7 +153,7 @@ export const places = [
     name: 'Sports Complex Layyah',
     description: 'The hub of local sports, where traditional games like Kabaddi intersect with modern cricket and football. A place of energy and youth culture.',
     location: 'Layyah City',
-    image: 'https://images.unsplash.com/photo-1550136262-675e810a7019?auto=format&fit=crop&q=80&w=1080',
+    image: 'https://images.unsplash.com/photo-1639586827570-e1a3268aecaf?auto=format&fit=crop&q=80&w=1080',
     relatedRouteId: null,
     coordinates: { lat: 30.9550, lng: 70.9400 }
   },
@@ -164,7 +162,7 @@ export const places = [
     name: 'Children Park (Sugar Mills)',
     description: 'Located near the historic Sugar Mills, this park has served generations of workers\' families and locals, holding nostalgic value for the community.',
     location: 'Layyah City',
-    image: 'https://images.unsplash.com/photo-1598556606889-8d752984577c?auto=format&fit=crop&q=80&w=1080',
+    image: 'https://images.unsplash.com/photo-1768633981225-a95323384239?auto=format&fit=crop&q=80&w=1080',
     relatedRouteId: null,
     coordinates: { lat: 30.9600, lng: 70.9350 }
   }
@@ -385,7 +383,7 @@ export const heritageRoutes = [
     bestTime: 'Late Afternoon',
     distance: '4.0 km',
     description: 'A unique blend of Sufi spirituality and desert landscape. Visit the center of learning at Bero Sharif and walk to the edge of the Thal desert.',
-    image: imgFatehpurWalk,
+    image: 'https://images.unsplash.com/photo-1740168026235-70c2ced2b811?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdWZpJTIwc2hyaW5lJTIwZGVzZXJ0JTIwbGFuZHNjYXBlJTIwcGFraXN0YW58ZW58MXx8fHwxNzcwMTM4NTczfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
     relatedExperienceId: null,
     path: [
       { lat: 31.0200, lng: 71.2000 },
