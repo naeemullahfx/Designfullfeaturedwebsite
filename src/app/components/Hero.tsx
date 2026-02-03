@@ -22,7 +22,7 @@ export const Hero: React.FC<HeroProps> = ({ onExplore, onBook }) => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-[1440px] mx-auto px-6 lg:px-[54px] text-center">
+      <div className="relative z-10 max-w-full mx-auto px-4 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -37,7 +37,7 @@ export const Hero: React.FC<HeroProps> = ({ onExplore, onBook }) => {
           {/* Heading */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-[96px] font-bold tracking-tight mb-8 leading-[1.1] md:leading-[1.1] text-white drop-shadow-xl">
             Discover <span className="text-[#fe9a00]">Heritage</span>, <br />
-            Culture & Experiences
+            <span className="md:whitespace-nowrap">Culture & Experiences</span>
           </h1>
 
           {/* Paragraph */}
