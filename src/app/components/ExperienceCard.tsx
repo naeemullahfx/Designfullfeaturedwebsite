@@ -1,5 +1,5 @@
 import React from 'react';
-import { Clock, Star, ArrowUpRight } from 'lucide-react';
+import { Clock, Star, ArrowUpRight, CalendarCheck } from 'lucide-react';
 import { motion } from 'motion/react';
 
 interface ExperienceCardProps {
@@ -10,11 +10,12 @@ interface ExperienceCardProps {
   duration?: string;
   rating?: number;
   onViewDetails: () => void;
+  onBook: () => void;
   index?: number;
 }
 
 export const ExperienceCard: React.FC<ExperienceCardProps> = ({ 
-  title, image, description, price, duration, rating, onViewDetails, index = 0 
+  title, image, description, price, duration, rating, onViewDetails, onBook, index = 0 
 }) => {
   return (
     <motion.div 
@@ -24,7 +25,10 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
       viewport={{ once: true }}
       transition={{ delay: index * 0.1, duration: 0.5 }}
     >
-      <div className="relative h-64 overflow-hidden">
+      <div 
+        className="relative h-64 overflow-hidden cursor-pointer"
+        onClick={onViewDetails}
+      >
         <img 
           src={image} 
           alt={title} 
@@ -54,7 +58,10 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
           )}
         </div>
         
-        <h3 className="text-xl font-bold text-stone-900 mb-2 group-hover:text-amber-700 transition-colors">
+        <h3 
+          className="text-xl font-bold text-stone-900 mb-2 group-hover:text-amber-700 transition-colors cursor-pointer"
+          onClick={onViewDetails}
+        >
           {title}
         </h3>
         
@@ -62,13 +69,25 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
           {description}
         </p>
         
-        <button 
-          onClick={onViewDetails}
-          className="w-full py-3 border border-stone-200 rounded-xl text-stone-900 font-medium hover:bg-stone-900 hover:text-white transition-all flex items-center justify-center gap-2 group/btn"
-        >
-          View Details
-          <ArrowUpRight size={16} className="transition-transform group-hover/btn:-translate-y-0.5 group-hover/btn:translate-x-0.5" />
-        </button>
+        <div className="grid grid-cols-2 gap-3 mt-auto">
+          <button 
+            onClick={onViewDetails}
+            className="px-4 py-3 border border-stone-200 rounded-xl text-stone-700 font-bold hover:bg-stone-50 transition-all flex items-center justify-center gap-2 text-sm"
+          >
+            View Experience
+          </button>
+          
+          <button 
+            onClick={(e) => {
+              e.stopPropagation();
+              onBook();
+            }}
+            className="px-4 py-3 bg-stone-900 text-white rounded-xl font-bold hover:bg-amber-600 transition-all flex items-center justify-center gap-2 text-sm shadow-md hover:shadow-lg"
+          >
+            Book Now
+            <ArrowUpRight size={16} />
+          </button>
+        </div>
       </div>
     </motion.div>
   );

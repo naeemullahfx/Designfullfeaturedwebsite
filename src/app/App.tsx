@@ -4,47 +4,162 @@ import { Footer } from '@/app/components/Footer';
 import { Home } from '@/app/pages/Home';
 import { Booking } from '@/app/pages/Booking';
 import { Profile } from '@/app/pages/Profile';
+import { Explore } from '@/app/pages/Explore';
+import { ExperienceDetail } from '@/app/pages/ExperienceDetail';
+import { Events } from '@/app/pages/Events';
+import { EventDetail } from '@/app/pages/EventDetail';
+import { Shrines } from '@/app/pages/Shrines';
+import { ShrineDetail } from '@/app/pages/ShrineDetail';
+import { HeritageRoutes } from '@/app/pages/HeritageRoutes';
+import { HeritageRouteDetail } from '@/app/pages/HeritageRouteDetail';
 
 const App: React.FC = () => {
   const [currentView, setCurrentView] = useState('home');
   const [selectedExperience, setSelectedExperience] = useState<any>(null);
+  const [selectedEvent, setSelectedEvent] = useState<any>(null);
+  const [selectedShrine, setSelectedShrine] = useState<any>(null);
+  const [selectedRoute, setSelectedRoute] = useState<any>(null);
+  const [bookingDetails, setBookingDetails] = useState<{date?: string, guests?: number} | null>(null);
 
   // Handle scrolling for section-based nav items
   useEffect(() => {
-    if (['explore', 'events', 'walks'].includes(currentView)) {
-      setCurrentView('home');
-      setTimeout(() => {
-        const id = currentView === 'explore' ? 'experiences' 
-                 : currentView === 'events' ? 'events-section' // I need to add this ID to Home
-                 : 'walks-section'; // And this
-        
-        // Manual mapping since I forgot IDs in Home.tsx. 
-        // Let's just scroll to rough positions or fix Home.tsx.
-        // Actually, easier to just pass a prop "initialSection" to Home or handle it here.
-        
-        const elementId = 
-          currentView === 'explore' ? 'experiences' : 
-          currentView === 'events' ? 'events-section' :
-          currentView === 'walks' ? 'walks-section' : null;
-          
-        if (elementId) {
-           // I need to add IDs to Home.tsx sections. I'll edit Home.tsx quickly or just scroll based on index.
-           // Since I can't easily query selectors reliably without ids, I'll update Home.tsx
-        }
-      }, 100);
+    if (['walks'].includes(currentView)) {
+      const targetView = 'home';
+      if (currentView !== targetView) {
+          setCurrentView('home');
+          setTimeout(() => {
+            const elementId = 'walks-section';
+            const el = document.getElementById(elementId);
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+          }, 100);
+      }
     }
   }, [currentView]);
+
+  const handleViewExperience = (exp: any) => {
+    setSelectedExperience(exp);
+    setCurrentView('detail');
+    window.scrollTo(0, 0);
+  };
+
+  const handleViewEvent = (evt: any) => {
+    setSelectedEvent(evt);
+    setCurrentView('event-detail');
+    window.scrollTo(0, 0);
+  };
+
+  const handleViewShrine = (shrine: any) => {
+    setSelectedShrine(shrine);
+    setCurrentView('shrine-detail');
+    window.scrollTo(0, 0);
+  };
+
+  const handleViewRoute = (route: any) => {
+    setSelectedRoute(route);
+    setCurrentView('route-detail');
+    window.scrollTo(0, 0);
+  };
+
+  const handleBookExperience = (exp?: any, details?: { date: string; guests: number }) => {
+    if (exp) setSelectedExperience(exp);
+    if (details) setBookingDetails(details);
+    else setBookingDetails(null);
+    
+    setCurrentView('booking');
+    window.scrollTo(0, 0);
+  };
+
+  // Helper for cross-linking
+  const handleNavigateFromRelated = (id: string, type: 'experience' | 'shrine' | 'route') => {
+    import('@/app/data').then(({ experiences, shrines, heritageRoutes }) => {
+       if (type === 'experience') {
+         const exp = experiences.find(e => e.id === id);
+         if (exp) handleViewExperience(exp);
+       } else if (type === 'shrine') {
+         const shrine = shrines.find(s => s.id === id);
+         if (shrine) handleViewShrine(shrine);
+       } else if (type === 'route') {
+         const route = heritageRoutes.find(r => r.id === id);
+         if (route) handleViewRoute(route);
+       }
+    });
+  };
 
   const renderView = () => {
     switch (currentView) {
       case 'home':
-        return <Home setView={setCurrentView} setExperience={setSelectedExperience} />;
+        return (
+          <Home 
+            setView={setCurrentView} 
+            setExperience={setSelectedExperience} // Kept for legacy internal logic, but effectively replaced by onView/onBook
+            onViewExperience={handleViewExperience}
+            onBookExperience={handleBookExperience}
+          />
+        );
+      case 'explore':
+        return (
+          <Explore 
+            onViewExperience={handleViewExperience} 
+            onBookExperience={handleBookExperience}
+          />
+        );
+      case 'events':
+        return <Events onViewEvent={handleViewEvent} />;
+      case 'shrines':
+        return <Shrines onViewShrine={handleViewShrine} />;
+      case 'routes':
+        return <HeritageRoutes onViewRoute={handleViewRoute} />;
+      case 'detail':
+        return (
+          <ExperienceDetail 
+            experience={selectedExperience} 
+            onBook={(details) => handleBookExperience(selectedExperience, details)} 
+            onBack={() => setCurrentView('explore')} 
+          />
+        );
+      case 'event-detail':
+        return (
+          <EventDetail 
+            event={selectedEvent} 
+            onBack={() => setCurrentView('events')}
+            onNavigateToRelated={(id, type) => handleNavigateFromRelated(id, type)}
+          />
+        );
+      case 'shrine-detail':
+        return (
+          <ShrineDetail 
+            shrine={selectedShrine} 
+            onBack={() => setCurrentView('shrines')}
+          />
+        );
+      case 'route-detail':
+        return (
+          <HeritageRouteDetail 
+            route={selectedRoute} 
+            onBack={() => setCurrentView('routes')}
+            onNavigateToExperience={(id) => handleNavigateFromRelated(id, 'experience')}
+          />
+        );
       case 'booking':
-        return <Booking initialExperience={selectedExperience} onClose={() => setCurrentView('home')} />;
+        return (
+          <Booking 
+            initialExperience={selectedExperience}
+            initialDate={bookingDetails?.date}
+            initialGuests={bookingDetails?.guests} 
+            onClose={() => setCurrentView('home')} 
+          />
+        );
       case 'profile':
         return <Profile setView={setCurrentView} />;
       default:
-        return <Home setView={setCurrentView} setExperience={setSelectedExperience} />;
+        return (
+          <Home 
+            setView={setCurrentView} 
+            setExperience={setSelectedExperience} 
+            onViewExperience={handleViewExperience}
+            onBookExperience={handleBookExperience}
+          />
+        );
     }
   };
 
