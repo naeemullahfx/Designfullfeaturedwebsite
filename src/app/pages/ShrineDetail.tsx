@@ -12,7 +12,7 @@ export const ShrineDetail: React.FC<ShrineDetailProps> = ({ shrine, onBack }) =>
   if (!shrine) return null;
 
   return (
-    <div className="bg-stone-50 min-h-screen pt-24 pb-20">
+    <div className="bg-stone-50 min-h-screen pt-40 pb-20">
       <div className="max-w-5xl mx-auto px-6">
         
         {/* Navigation */}

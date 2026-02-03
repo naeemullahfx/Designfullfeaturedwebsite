@@ -36,7 +36,7 @@ export const HeritageRouteDetail: React.FC<HeritageRouteDetailProps> = ({ route,
     : { lat: 30.9693, lng: 70.9428 };
 
   return (
-    <div className="bg-white min-h-screen pt-24 pb-20">
+    <div className="bg-white min-h-screen pt-40 pb-20">
       <div className="max-w-5xl mx-auto px-6">
         
         {/* Navigation */}

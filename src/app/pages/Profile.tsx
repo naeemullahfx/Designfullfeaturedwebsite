@@ -10,9 +10,16 @@ interface ProfileProps {
 
 export const Profile: React.FC<ProfileProps> = ({ setView }) => {
   const [activeTab, setActiveTab] = React.useState('bookings');
+  const [bookings, setBookings] = React.useState(userBookings);
+
+  const handleCancelBooking = (id: string) => {
+    if (window.confirm('Are you sure you want to cancel this booking request?')) {
+      setBookings(prev => prev.filter(b => b.id !== id));
+    }
+  };
 
   // Enhance booking data with experience details
-  const myBookings = userBookings.map(booking => {
+  const myBookings = bookings.map(booking => {
     const exp = experiences.find(e => e.id === booking.experienceId);
     return { ...booking, exp };
   });
@@ -83,7 +90,10 @@ export const Profile: React.FC<ProfileProps> = ({ setView }) => {
                     </div>
                     
                     {b.status === 'Pending' && (
-                      <button className="text-red-500 text-sm font-medium hover:text-red-700 flex items-center gap-1 bg-red-50 px-3 py-1.5 rounded-lg transition-colors">
+                      <button 
+                        onClick={() => handleCancelBooking(b.id)}
+                        className="text-red-500 text-sm font-medium hover:text-red-700 flex items-center gap-1 bg-red-50 px-3 py-1.5 rounded-lg transition-colors"
+                      >
                         <XCircle size={16} /> Cancel Request
                       </button>
                     )}

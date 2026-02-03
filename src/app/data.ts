@@ -1,3 +1,4 @@
+import imgFatehpurWalk from 'figma:asset/094747da906b532860d6d76bb5c9440f0809e15a.png';
 
 // --- EXPERIENCES (Bookable Activities) ---
 export const experiences = [
@@ -177,7 +178,7 @@ export const events = [
     date: 'March 18–22, 2026',
     season: 'Spring · Cultural',
     description: 'A vibrant celebration of culture, devotion, and local crafts in the heart of the Thal region.',
-    image: 'https://images.unsplash.com/photo-1661419118701-a1a85451b892?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjdWx0dXJhbCUyMGZlc3RpdmFsJTIwcHVuamFiJTIwcGFraXN0YW58ZW58MXx8fHwxNzcwMDUzNDY4fDA&ixlib=rb-4.1.0&q=80&w=1080',
+    image: 'https://images.unsplash.com/photo-1640699509658-41518a662882?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYW1lbCUyMGNhcmF2YW4lMjBkZXNlcnQlMjBwYWtpc3RhbnxlbnwxfHx8fDE3NzAxMzYyNDh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
     category: 'Cultural',
     culturalNote: 'Famous for its Camel Dance performances and traditional tent pegging competitions.',
     history: 'Dating back over a century, this festival marks the start of the harvest season in the region, bringing together communities from across Layyah.',
@@ -192,7 +193,7 @@ export const events = [
     date: 'April 13, 2026',
     season: 'Spring · Cultural',
     description: 'Celebrating the wheat harvest with joy, music, and traditional Punjabi food.',
-    image: 'https://images.unsplash.com/photo-1550136262-675e810a7019?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwdW5qYWIlMjBoYXJ2ZXN0JTIwZmVzdGl2YWx8ZW58MXx8fHwxNzcwMDU2MDMzfDA&ixlib=rb-4.1.0&q=80&w=1080',
+    image: 'https://images.unsplash.com/photo-1628672455749-89510181e191?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3aGVhdCUyMGhhcnZlc3QlMjBmZXN0aXZhbCUyMHB1bmphYiUyMHBha2lzdGFuJTIwdmlicmFudHxlbnwxfHx8fDE3NzAxMzYxNTR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
     category: 'Cultural',
     culturalNote: 'A thanksgiving festival for the abundant wheat harvest.',
     history: 'An ancient festival celebrated across Punjab to mark the solar new year and the ripening of the rabi harvest.',
@@ -222,7 +223,7 @@ export const events = [
     date: 'July 2026',
     season: 'Summer · Religious',
     description: 'A traditional fair linked with the spiritual legacy of Hazrat Lal Esan.',
-    image: 'https://images.unsplash.com/photo-1580220261314-255d65415754?auto=format&fit=crop&q=80&w=1080',
+    image: 'https://images.unsplash.com/photo-1733158175552-401b752f7155?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdWZpJTIwc2hyaW5lJTIwbmlnaHQlMjBjcm93ZCUyMGxhbXBzJTIwcGFraXN0YW58ZW58MXx8fHwxNzcwMTM2MTU0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
     category: 'Religious',
     culturalNote: 'Held on the 14th of the lunar month, attracting local devotees.',
     history: 'A monthly or annual observance that keeps the spiritual connection alive throughout the year.',
@@ -237,7 +238,7 @@ export const events = [
     date: 'October 2026',
     season: 'Autumn · Cultural',
     description: 'The "Festival of Lights" celebrated at local shrines, illuminating the spiritual night.',
-    image: 'https://images.unsplash.com/photo-1596541223130-5d31a73fb6c6?auto=format&fit=crop&q=80&w=1080',
+    image: 'https://images.unsplash.com/photo-1737728516454-6e6624838623?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvaWwlMjBsYW1wcyUyMHNocmluZSUyMG5pZ2h0JTIwcGFraXN0YW58ZW58MXx8fHwxNzcwMTM2MjQ0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
     category: 'Cultural',
     culturalNote: 'Symbolizes the light of knowledge and spirituality dispelling darkness.',
     history: 'Inspired by the great Mela Chiraghan of Lahore, local versions are held to honor Sufi saints.',
@@ -288,7 +289,7 @@ export const shrines = [
     name: 'Darbar Bero Sharif',
     location: 'Fatehpur, Layyah',
     description: 'A center of Sufi learning and devotion, attracting pilgrims from across the region.',
-    image: 'https://images.unsplash.com/photo-1599827473767-622956276859?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpc2xhbWljJTIwYXJjaGl0ZWN0dXJlJTIwcGFraXN0YW58ZW58MXx8fHwxNzcwMDU3NjI1fDA&ixlib=rb-4.1.0&q=80&w=1080',
+    image: 'https://images.unsplash.com/photo-1661470468460-5733b5e74ba4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdWZpJTIwZGFyYmFyJTIwZ3JlZW4lMjBkb21lJTIwcGFraXN0YW58ZW58MXx8fHwxNzcwMTM2MDExfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
     history: 'Established in the 19th century by Hazrat Khawaja Ghulam Hassan Swag, Bero Sharif became a beacon of religious education and spiritual guidance in the area.',
     significance: 'The shrine is not just a resting place but an active seminary (Madrassa) where students learn Quran and Sufi philosophy. It represents the scholarly tradition of Sufism.',
     ursInfo: 'The annual gathering takes place in the lunar month of Rajab. It focuses heavily on religious discourses and Naat recitations.',
@@ -305,7 +306,7 @@ export const shrines = [
     name: 'Shrine of Pir Fakir Allah',
     location: 'Layyah District',
     description: 'A revered shrine known for its simplicity and the devotion of the local desert communities.',
-    image: 'https://images.unsplash.com/photo-1585642436098-b02447d25e4c?auto=format&fit=crop&q=80&w=1080',
+    image: 'https://images.unsplash.com/photo-1538923009630-a05a89b5deed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxVY2glMjBTaGFyaWYlMjBzaHJpbmUlMjBibHVlJTIwdGlsZXN8ZW58MXx8fHwxNzcwMTM2MDA2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
     history: 'Pir Fakir Allah was a wandering Sufi dervish who settled in the Thal region, preaching humility and detachment from material wealth.',
     significance: 'A spiritual refuge for the nomadic people of Thal. It acts as a community hub where disputes are resolved and blessings are sought.',
     ursInfo: 'The Urs is a quiet, solemn affair involving prayers and recitation of the Quran.',
@@ -384,7 +385,7 @@ export const heritageRoutes = [
     bestTime: 'Late Afternoon',
     distance: '4.0 km',
     description: 'A unique blend of Sufi spirituality and desert landscape. Visit the center of learning at Bero Sharif and walk to the edge of the Thal desert.',
-    image: 'https://images.unsplash.com/photo-1547234935-80c7142ee969?auto=format&fit=crop&q=80&w=1080',
+    image: imgFatehpurWalk,
     relatedExperienceId: null,
     path: [
       { lat: 31.0200, lng: 71.2000 },

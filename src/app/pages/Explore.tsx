@@ -77,7 +77,7 @@ export const Explore: React.FC<ExploreProps> = ({ onViewExperience, onBookExperi
       }));
 
   return (
-    <div className="min-h-screen bg-white pt-20">
+    <div className="min-h-screen bg-white pt-40">
       <Section className="!py-12">
         <div className="flex flex-col lg:flex-row gap-8 items-start">
           
@@ -269,7 +269,7 @@ export const Explore: React.FC<ExploreProps> = ({ onViewExperience, onBookExperi
                 {activeTab === 'experiences' ? (
                   // EXPERIENCES GRID
                   filteredExperiences.length > 0 ? (
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       {filteredExperiences.map((exp, idx) => (
                         <ExperienceCard 
                           key={exp.id} 
@@ -291,7 +291,7 @@ export const Explore: React.FC<ExploreProps> = ({ onViewExperience, onBookExperi
                 ) : (
                   // PLACES GRID
                   filteredPlaces.length > 0 ? (
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       {filteredPlaces.map((place, idx) => (
                         <motion.div
                           key={place.id}

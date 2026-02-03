@@ -29,7 +29,7 @@ export const Shrines: React.FC<ShrinesProps> = ({ onViewShrine }) => {
   }));
 
   return (
-    <div className="min-h-screen bg-stone-50 pt-20">
+    <div className="min-h-screen bg-stone-50 pt-40">
       <Section>
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-amber-600 font-bold tracking-wider text-sm uppercase mb-2 block">

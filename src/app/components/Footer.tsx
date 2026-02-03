@@ -1,5 +1,6 @@
 import React from 'react';
 import { Facebook, Instagram, Twitter, Mail, MapPin, Phone } from 'lucide-react';
+import { Logo } from '@/app/components/Logo';
 
 export const Footer: React.FC = () => {
   return (
@@ -8,9 +9,8 @@ export const Footer: React.FC = () => {
         
         {/* Brand */}
         <div className="space-y-4">
-          <div className="flex items-center gap-2 text-white">
-            <div className="w-8 h-8 bg-amber-700 rounded-lg flex items-center justify-center font-bold">L</div>
-            <span className="font-bold text-xl">Layyah Heritage</span>
+          <div className="flex items-center gap-2">
+            <Logo variant="light" />
           </div>
           <p className="text-sm leading-relaxed text-stone-400">
             A community-led initiative to preserve and showcase the spiritual, cultural, and historical heritage of Layyah.

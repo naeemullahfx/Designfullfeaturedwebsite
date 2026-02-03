@@ -327,7 +327,7 @@ export const Booking: React.FC<BookingProps> = ({ initialExperience, initialDate
   );
 
   return (
-    <div className="min-h-screen pt-24 pb-12 bg-stone-50">
+    <div className="min-h-screen pt-40 pb-12 bg-stone-50">
       <div className="max-w-5xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
         {/* Main Content Area */}

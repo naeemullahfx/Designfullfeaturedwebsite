@@ -151,7 +151,7 @@ export const HeritageMap: React.FC<HeritageMapProps> = ({
         center={center} 
         zoom={zoom} 
         style={{ height: '100%', width: '100%' }}
-        scrollWheelZoom={interactive}
+        scrollWheelZoom={false}
         dragging={interactive}
         zoomControl={interactive}
       >

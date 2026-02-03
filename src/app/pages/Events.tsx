@@ -38,7 +38,7 @@ export const Events: React.FC<EventsProps> = ({ onViewEvent }) => {
   }));
 
   return (
-    <div className="min-h-screen bg-white pt-20">
+    <div className="min-h-screen bg-white pt-40">
       <Section className="!pb-0">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="text-amber-600 font-bold tracking-wider text-sm uppercase mb-2 block">

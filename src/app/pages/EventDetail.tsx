@@ -30,7 +30,7 @@ export const EventDetail: React.FC<EventDetailProps> = ({ event, onBack, onNavig
   };
 
   return (
-    <div className="bg-white min-h-screen pt-24 pb-20">
+    <div className="bg-white min-h-screen pt-40 pb-20">
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
         
         {/* Navigation */}

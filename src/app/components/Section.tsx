@@ -13,14 +13,14 @@ export const Section: React.FC<SectionProps> = ({ children, className, id, bg = 
     <section 
       id={id}
       className={clsx(
-        "py-20 md:py-24",
+        "py-16 lg:py-[60px]",
         bg === 'stone' && "bg-stone-50",
         bg === 'dark' && "bg-stone-900 text-white",
         bg === 'white' && "bg-white",
         className
       )}
     >
-      <div className="max-w-[1440px] mx-auto px-6">
+      <div className="max-w-[1440px] mx-auto px-6 lg:px-[54px]">
         {children}
       </div>
     </section>
